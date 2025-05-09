@@ -19,7 +19,7 @@ __SYD.roadMapPage = () =>{
                     __c(
                         "p",
                         {
-                            style:`font-size:25px;font-weight:900;text-transform:capitalize;margin-bottom:10px;width:fit-content;font-family:header;color:#fff;margin-bottom:10px;font-size:${__p(['roadMapPage' , '__font'],{1:'30px'})['1']};` + __sC['txt_shade2'](),
+                            style:`font-size:25px;font-weight:900;text-transform:capitalize;margin-bottom:10px;width:fit-content;font-family:header;color:#fff;margin-bottom:10px;font-size:${__p(['roadMapPage' , '__font'],{1:'50px'})['1']};` + __sC['txt_shade2'](),
                             class:"tokenomic_text"
                         },
                         [
@@ -111,11 +111,11 @@ __SYD.roadMapPage = () =>{
         {
             createState:{
                 stateName:"roadMapPage",
-                state:{__query:false,__font:{1:'30px',2:'20px'}}
+                state:{__query:false,__font:{1:'50px',2:'20px'}}
             },
             mediaQuery:{
-                query:[{size:"<600px",prop:{__query:true,__font:{1:'25px',2:'17px'}}}],
-                defState:{__query:false,__font:{1:'30px',2:'20px'}}
+                query:[{size:"<600px",prop:{__query:true,__font:{1:'30px',2:'17px'}}}],
+                defState:{__query:false,__font:{1:'50px',2:'20px'}}
             }
         }
     )

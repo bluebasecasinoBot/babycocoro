@@ -9,9 +9,9 @@ __SYD._p3 = () =>{
             id:'about'
         },
         [
-            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3','__size'],'30px')};`+__sC['txt_shade2']()},['ABOUT']),
+            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3','__size'],'50px')};`+__sC['txt_shade2']()},['ABOUT']),
 
-            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3','__size'],'30px') == "30px" ? "40px" : "30px"};`+__sC['txt_shade2']()},['BABY COCORO']),
+            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3','__size'],'50px') == "50px" ? "60px" : "35px"};`+__sC['txt_shade2']()},['BABY COCORO']),
             __c(
                 "div",
                 {
@@ -33,7 +33,7 @@ __SYD._p3 = () =>{
                     __c(
                         'div',
                         {
-                            style:`min-height:${__p(['_p3','__size'],'30px') === '30px' ? '80vh' : '300px'};min-width:${__p(['_p3','__size'],'30px') === '30px' ? '40%' : '100%'};background-image:url("./assets/aux.png");background-size:contain;border-radius:15px;`,
+                            style:`min-height:${__p(['_p3','__size'],'50px') === '50px' ? '80vh' : '300px'};min-width:${__p(['_p3','__size'],'50px') === '50px' ? '40%' : '100%'};background-image:url("./assets/aux.png");background-size:contain;border-radius:15px;`,
                         },
                         [
                             
@@ -70,11 +70,11 @@ __SYD._p3 = () =>{
         {
             createState:{
                 stateName:'_p3',
-                state:{__size:'30px',__flex:'row',__font:{1:'30px',2:'20px'}}
+                state:{__size:'50px',__flex:'row',__font:{1:'50px',2:'20px'}}
             },
             mediaQuery:{
-                query:[{size:'<900px',prop:{__size:'25px',__flex:'column-reverse',__font:{1:'25px',2:'17px'}}}],
-                defState:{__size:'30px',__flex:'row',__font:{1:'30px',2:'20px'}}
+                query:[{size:'<900px',prop:{__size:'30px',__flex:'column-reverse',__font:{1:'30px',2:'17px'}}}],
+                defState:{__size:'50px',__flex:'row',__font:{1:'50px',2:'20px'}}
             }
         }
     )

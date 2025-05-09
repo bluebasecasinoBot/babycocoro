@@ -9,7 +9,7 @@ __SYD._p3_aux = () =>{
             id:'about_aux'
         },
         [
-            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3_aux','__size'],'30px')};`+__sC['txt_shade2']()},['HOW TO BUY']),
+            __c('h1',{style:`font-family:header;font-weight:900;font-size:${__p(['_p3_aux','__size'],'50px')};`+__sC['txt_shade2']()},['HOW TO BUY']),
             __c(
                 "div",
                 {
@@ -31,7 +31,7 @@ __SYD._p3_aux = () =>{
                     __c(
                         'div',
                         {
-                            style:`min-height:${__p(['_p3_aux','__size'],'30px') === '30px' ? '80vh' : '300px'};min-width:${__p(['_p3_aux','__size'],'30px') === '30px' ? '40%' : '100%'};background-image:url("./assets/about.png");background-size:contain;border-radius:15px;`,
+                            style:`min-height:${__p(['_p3_aux','__size'],'50px') === '50px' ? '80vh' : '300px'};min-width:${__p(['_p3_aux','__size'],'50px') === '50px' ? '40%' : '100%'};background-image:url("./assets/about.png");background-size:contain;border-radius:15px;`,
                         },
                         [
                             
@@ -68,11 +68,11 @@ __SYD._p3_aux = () =>{
         {
             createState:{
                 stateName:'_p3_aux',
-                state:{__size:'30px',__flex:'row-reverse',__font:{1:'30px',2:'20px'}}
+                state:{__size:'50px',__flex:'row-reverse',__font:{1:'30px',2:'20px'}}
             },
             mediaQuery:{
-                query:[{size:'<900px',prop:{__size:'25px',__flex:'column',__font:{1:'25px',2:'17px'}}}],
-                defState:{__size:'30px',__flex:'row-reverse',__font:{1:'30px',2:'20px'}}
+                query:[{size:'<900px',prop:{__size:'30px',__flex:'column',__font:{1:'25px',2:'17px'}}}],
+                defState:{__size:'50px',__flex:'row-reverse',__font:{1:'30px',2:'20px'}}
             }
         }
     )
