@@ -33,7 +33,7 @@ __SYD._p5 = () =>{
             __c(
                 'div',
                 {
-                    style:'width:calc(100% - 15px);max-width:600px;min-width:250px;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;text-align:left;padding:50px 30px;row-gap:10px;box-shadow:0px 2px 1px 2px rgb(2, 56, 94) , 0 0 1px 1px rgb(2, 56, 94);border-radius:20px;background: rgb(3, 83, 139);color:#fafafa;',
+                    style:'width:calc(100% - 15px);max-width:600px;min-width:250px;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;text-align:left;padding:50px 30px;row-gap:10px;box-shadow:0px 2px 1px 2px rgb(2, 56, 94) , 0 0 1px 1px rgb(2, 56, 94);border-radius:20px;background: #c2c1bf;color:#fafafa;text-shadow:2px 4px 0px #000 , 3px 3px 0px #000;',
                     // class:"tab_text"
                 },
                 [
@@ -73,7 +73,7 @@ __SYD._p5 = () =>{
 }
 
 __SYD.about_text_tokenomics = (text) =>{
-    return __c('p',{style:`font-size: ${__p(['_p5','__font'],{1:'30px'})['2']};line-height: 1.75rem;text-align:left;font-weight:100;width:max-content;padding:15px 20px;width:100%;`},[//class:'btn_buy'
+    return __c('p',{style:`font-size: ${__p(['_p5','__font'],{1:'30px'})['2']};line-height: 1.75rem;text-align:left;font-weight:700;width:max-content;padding:15px 20px;width:100%;`},[//class:'btn_buy'
         text
     ])
 }

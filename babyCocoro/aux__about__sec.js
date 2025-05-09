@@ -98,7 +98,7 @@ __SYD.page1Socials_large_icons = () =>{
 }
 
 __SYD.about_text_aux = () =>{
-    return __c('p',{style:`border-left:6px solid ;border-bottom:6px solid ;font-size:${__p(['_p3_aux' , '__font'],{2:'20px'})['2']};line-height: unset;max-width:500px;text-align:left;font-weight:100;padding:${__p(["_p3_aux" , "__flex"],"row-reverse") === "row-reverse" ? "50px" : "20px"};background:#fff;border-radius:60px;color:rgb(2, 43, 73);`},[
+    return __c('p',{style:`border-left:6px solid #333;border-bottom:6px solid #333;font-size:${__p(['_p3_aux' , '__font'],{2:'20px'})['2']};line-height: unset;max-width:500px;text-align:left;font-weight:100;padding:${__p(["_p3_aux" , "__flex"],"row-reverse") === "row-reverse" ? "50px" : "20px"};background:#fff;border-radius:60px;color:rgb(2, 43, 73);`},[
         __c("p" , {style:`margin-top:12px;`} , [
             `We’re thrilled to unveil the token distribution plan for Baby Cocoro—your ticket to chaos, rewards, and high-speed degen action on Ethereum!`
         ]),

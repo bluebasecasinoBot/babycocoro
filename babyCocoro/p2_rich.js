@@ -101,7 +101,7 @@ __SYD.caBtn = () =>{
             __c(
                 'div',
                 {
-                    style:'min-height:50px;min-width:50px;width:100%;height:fit-content;display:flex;align-items:center;cursor:pointer;background:#fff;border-radius:5px;color:#171717;transform:unset;box-shadow:0px 2px 1px 1px rgb(2, 56, 94) , 0 0 1px 1px rgb(2, 56, 94);',
+                    style:'min-height:50px;min-width:50px;width:100%;height:fit-content;display:flex;align-items:center;cursor:pointer;background:#fff;border-radius:5px;color:#171717;transform:unset;box-shadow:1px 2px 0px 1px #171717',
                 },
                 [
                     __c(
@@ -110,13 +110,13 @@ __SYD.caBtn = () =>{
                             style:"height:50px;width:calc(100% - 50px);padding:5px;display:flex;align-items:center;"
                         },
                         [
-                            __c('p',{style:'font-weight:700;font-size:16px;max-width:100%;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},['--------------------------------------------'])
+                            __c('p',{style:'font-weight:700;font-size:16px;max-width:100%;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;text-shadow:none;'},['--------------------------------------------'])
                         ]
                     ),
                     __c(
                         "div",
                         {
-                            style:`min-height:50px;min-width:50px;width:50px;background-color:rgb(4, 97, 163);cursor:pointer;background-size:50%;background-image:url("assets/copy.png");border-radius:inherit;border-top-left-radius:0px;border-bottom-left-radius:0px;`,
+                            style:`min-height:50px;min-width:50px;width:50px;background-color: #ffe202;cursor:pointer;background-size:50%;background-image:url("assets/copy.png");border-radius:inherit;border-top-left-radius:0px;border-bottom-left-radius:0px;`,
                             class:'btn_copy'
                         },[],{genericStyle:['bg_fit'],}
                     )

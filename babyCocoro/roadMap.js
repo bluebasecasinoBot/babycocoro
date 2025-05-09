@@ -30,13 +30,13 @@ __SYD.roadMapPage = () =>{
                     __c(
                         "div",
                         {
-                            style:`color:#fff;font-family:sunrise;display:flex;flex-direction:column;align-items:center;row-gap:60px;height:fit-content;width:100%;font-weight:100;`// +__sC['txt_shade3']()//transform: translateX(25%) scale(${__p(['roadMapPage' , '__query'],false) ? ".8" : "1"});
+                            style:`color:#000000;font-family:sunrise;display:flex;flex-direction:column;align-items:center;row-gap:60px;height:fit-content;width:100%;font-weight:500;`// +__sC['txt_shade3']()//transform: translateX(25%) scale(${__p(['roadMapPage' , '__query'],false) ? ".8" : "1"});
                         },
                         [
                             __c(
                                 "p",
                                 {
-                                    style:`background: rgb(4, 97, 163) ;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:0s;`,
+                                    style:`background:#fffaec ;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:0s;`,
                                     class:"left_slant "
                                 },
                                 [
@@ -46,7 +46,7 @@ __SYD.roadMapPage = () =>{
                             __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.4s;"`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.4s;"`,
                                     class:"left_slant "
                                 },
                                 [
@@ -56,7 +56,7 @@ __SYD.roadMapPage = () =>{
                             __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.8s;`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.8s;`,
                                     class:"left_slant"
                                 },
                                 [
@@ -66,7 +66,7 @@ __SYD.roadMapPage = () =>{
                             __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.4s;`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.4s;`,
                                     class:"right_slant"
                                 },
                                 [
@@ -76,7 +76,7 @@ __SYD.roadMapPage = () =>{
                             __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.4s;text-align:right;`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.4s;text-align:right;`,
                                     class:"right_slant"
                                 },
                                 [
@@ -86,7 +86,7 @@ __SYD.roadMapPage = () =>{
                             __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.4s;text-align:right;`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.4s;text-align:right;`,
                                     class:"right_slant"
                                 },
                                 [
@@ -96,7 +96,7 @@ __SYD.roadMapPage = () =>{
                              __c(
                                 "p",
                                 {
-                                    style:`background:rgb(4, 97, 163);padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px rgb(2, 43, 73);border-radius:10px;animation-delay:.4s;text-align:right;`,
+                                    style:`background:#fffaec;padding:15px 10px;transform:translateX(0px);width:${__p(["roadMapPage" , "__query"],false) ? "100%" : "50%"};min-width:200px;margin-left:15px;box-shadow:2px 2px 1px #333333;border-radius:10px;animation-delay:.4s;text-align:right;`,
                                     class:""
                                 },
                                 [

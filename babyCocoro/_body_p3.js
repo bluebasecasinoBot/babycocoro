@@ -100,7 +100,7 @@ __SYD.page1Socials_large_icons = () =>{
 }
 
 __SYD.about_text = () =>{
-    return __c('p',{style:`border-right:6px solid ;border-bottom:6px solid ;font-size:${__p(['_p3' , '__font'],{2:'20px'})['2']};line-height: unset;max-width:500px;text-align:center;font-weight:100;padding:${__p(["_p3" , "__flex"],"row") === "row" ? "50px" : "20px"};background:#fff;border-radius:60px;color:rgb(2, 43, 73);`},[
+    return __c('p',{style:`border-right:6px solid #333;border-bottom:6px solid #333;font-size:${__p(['_p3' , '__font'],{2:'20px'})['2']};line-height: unset;max-width:500px;text-align:center;font-weight:100;padding:${__p(["_p3" , "__flex"],"row") === "row" ? "50px" : "20px"};background:#fff;border-radius:60px;color:rgb(2, 43, 73);`},[
         __c(
             "p",
             {

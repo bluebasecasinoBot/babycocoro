@@ -32,50 +32,52 @@ body{
 }
 .btn_buy__
 {
-    background-color: rgb(64, 168, 241);
+    background-color: #ffe202;
     font-weight: 900;
-    box-shadow: 2px 2px 1px rgb(2, 43, 73);
+    box-shadow: 3px 3px 0px rgba(51, 51, 51, 0.5);
     border-radius: 10px;
     transition: transform .3s linear;
+    transition: all linear .3s;
     /* background: linear-gradient(to bottom , #44f9b7ec , #2e9b96d9); */
 }
 .btn_buy
 {
-    background-color:rgb(4, 97, 163) ;
+    background-color:#ffe202 ;
     font-weight: 900;
-    box-shadow: 2px 2px 1px rgb(2, 43, 73);
+    box-shadow: 3px 3px 0px rgba(51, 51, 51);
     border-radius: 10px;
     transition: transform .3s linear;
+    transition: all linear .3s;
     /* background: linear-gradient(to bottom , #44f9b7ec , #2e9b96d9); */
 }
 
 .btn_buy__:hover
 {
-    background-color: rgb(27, 155, 247);
+    background-color: rgb(59 130 246);
     transform: scale3d(.9,.9,.9);
-    box-shadow: 0px 0px 0px 1px rgb(1, 39, 66);
+    box-shadow: 0px 0px 0px 1px #171717
     /* color: #fba388; */
 }
 
 .btn_buy:hover
 {
-    background-color: rgb(3, 93, 156);
+    background-color: rgb(59 130 246);
     transform: scale3d(.9,.9,.9);
-    box-shadow: 0px 0px 0px 1px rgb(1, 39, 66);
+    box-shadow: 0px 0px 0px 1px #171717;
 }
 
 .btn_copy
 {
-    border: 1px solid rgb(2, 56, 94);
-    border-bottom:3px solid rgb(2, 56, 94);
+    border: 1px solid #171717;
+    border-bottom:3px solid #171717;
     border-radius: 5px;
     /* color: #f77da6; */
 }
 
 .btn_copy:hover
 {
-    border-top: 3px solid rgb(2, 56, 94);
-    border-bottom: 1px solid rgb(2, 56, 94);
+    border-top: 3px solid #171717;
+    border-bottom: 1px solid #171717;
 }
 
 .tab_text
@@ -164,7 +166,7 @@ h1{
     right:0;
     height: 70px;
     width: 5px;
-    background: linear-gradient(to right , rgb(2, 43, 73) -10%, rgb(4, 97, 163));
+    background: linear-gradient(to right , #333 -10%, #171717);
     /* transform: rotateZ(-45deg); */
     border-radius: 2px;
     z-index: -1;
@@ -192,7 +194,7 @@ h1{
     left:0;
     height: 70px;
     width: 5px;
-    background: linear-gradient(to right , rgb(2, 43, 73) -10%, rgb(4, 97, 163));
+    background: linear-gradient(to right , #333 -10%, #171717);
     /* transform: rotateZ(45deg); */
     z-index: -1;
     border-radius: 2px;
