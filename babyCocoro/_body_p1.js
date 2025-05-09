@@ -17,6 +17,8 @@ __sS([
             padding:'0 15px',
             paddingTop:'50px',
             textAlign:'center',
+            marginTop:"100px"
+            // background:"linear-gradient(to bottom, transparent 90%, #5D4037 150%)"
             // transform:'translateY(-20px)'
         }
     }
@@ -32,7 +34,8 @@ __SYD._p1 = () =>{
             __c(
                 'div',
                 {
-                    style:'width:90%;max-width:1000px;position:relative'
+                    style:'width:fit-content;max-width:800px;position:relative;overflow:hidden;',
+                    class:'tab_text'
                 },
                 [
                 //    __SYD.introVideo(),
@@ -46,11 +49,11 @@ __SYD._p1 = () =>{
     )
 }
 
-setTimeout(() =>{
-    __v['_p1'].innerHTML = `<video muted controls style = 'width:100%' loop id="autoplay">
-        <source src='./assets/intro.mov' type="video/mp4">
+setTimeout(() =>{//max-height:100%;width:auto;max-
+    __v['_p1'].innerHTML = `<video autoplay playsinline muted style = 'height:100vh;width:auto;max-height:400px;' loop id="autoplay">
+        <source src='./assets/intro.mp4' type="video/mp4">
      </video>
-     <div style = 'height:50px;width:50px;position:absolute;top:10px;right:10px;border-radius:50%;background-size:70%;background-position:center;background-repeat:no-repeat;cursor:pointer;background-image:url("./assets/aud-d.png")' onclick = 'togMute()' id="aud"></div>`
+     <div style = 'height:50px;width:50px;position:absolute;top:10px;right:10px;border-radius:50%;background-size:70%;background-position:center;background-repeat:no-repeat;cursor:pointer;background-image:url("./assets/aud-d.png")' class="click" onclick = 'togMute()' id="aud"></div>`
 
      document.getElementById('autoplay').play();
 
@@ -60,18 +63,19 @@ __SYD.introVideo = () =>{
     return  __c(
         'video',
         {
-            style:'width:100%',
-            controls:'true',
+            style:'height:100vh;max-height:400px;width:auto;',
+            // controls:'false',
             // src:__p(['introVideo','url'],),
             autoplay:'autoplay',
             muted:true,
-            loop:true
+            loop:true,
+            playsinline:true
 
         },[
             __c(
                 'source',
                 {
-                    src:'./assets/intro.mov',
+                    src:'./assets/intro.mp4',
                     type:'video/mp4'
                 }
             )
@@ -114,7 +118,7 @@ __SYD.p1_overlay = () =>{
                     const p1_overlay = __g('p1_overlay');
                     const introVideo = __g('introVideo')
                     p1_overlay.d = 'none';
-                    introVideo.url = './assets/intro.mov'
+                    introVideo.url = './assets/intro.mp4'
                     __u('introVideo',{type:'a',value:introVideo})
                     __u('p1_overlay',{type:'a',value:p1_overlay});
                 }

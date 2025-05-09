@@ -7,6 +7,10 @@ const visualTreeParams = {
 
 const MEDIA_QUERY = new Object();
 
+export const SYD_VAR = {};
+
+let prevX = 0;
+
 const GENERIC_DOM = {
     bg_cover:{
         parent:{backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'},
@@ -27,11 +31,39 @@ const GENERIC_DOM = {
 }
 
 window.onload = () =>{
+    manage_mediaQuery(600);
     manage_mediaQuery(window.innerWidth)
 }
 
 window.onresize = () =>{
+    if(prevX !== window.innerWidth || prevX === 0)
+    {
+        manage_mediaQuery(600);
+    }
+    prevX = window.innerWidth;
+    
     manage_mediaQuery(window.innerWidth)
+}
+
+// window.onfocus = () =>{
+//     manage_mediaQuery(600);
+
+//     manage_mediaQuery(window.innerWidth)
+
+// }
+
+// window.onblur = () =>{
+//     manage_mediaQuery(600);
+
+//     manage_mediaQuery(window.innerWidth)
+
+// }
+
+window.onbeforeunload = () =>{
+    manage_mediaQuery(600);
+
+    manage_mediaQuery(window.innerWidth)
+
 }
 
 export const manage_mediaQuery = (width) =>{
@@ -39,9 +71,10 @@ export const manage_mediaQuery = (width) =>{
     {
         const unitInfo = MEDIA_QUERY[Object.keys(MEDIA_QUERY)[i]].query;
         let newMap = unitInfo.map(val =>{return val});
-        const sorted = [];
+        let sorted = newMap;
         let mediaMatch = false
 
+        // console.log(newMap)
         // adding default style;
         
         const sort = () =>{
@@ -63,12 +96,20 @@ export const manage_mediaQuery = (width) =>{
                     sort()
             }
         }
-        sort()
-        
-        sorted.forEach(val =>{
+        // sort()
+        // sorted = sorted.reverse()
+
+        for(let i = 0; i < sorted.length; i++)
+        {
+            const val = sorted[i];
+
+            let boolBreak = false;
+
             try{
                 const mode_reg = /(\<|\>)(\={0,})/.exec(val.size)[0];
                 const px_size = Number(/\d{1,}/.exec(val.size)[0]);
+
+                const querySizeArr = sorted.map(val =>{return Number(/\d{1,}/.exec(val.size)[0])});
     
                 switch(mode_reg)
                 {
@@ -76,6 +117,10 @@ export const manage_mediaQuery = (width) =>{
                         if(width < px_size)
                         {
                             applyStyle(val.prop)
+                            if(querySizeArr.sort((a,b) =>{return a-b}).indexOf(px_size) < sorted.length-1)
+                            {
+                                boolBreak = true
+                            }
                         }
                         // else
                         // {
@@ -86,6 +131,10 @@ export const manage_mediaQuery = (width) =>{
                         if(width <= px_size)
                         {
                             applyStyle(val.prop)
+                            if(querySizeArr.sort((a,b) =>{return a-b}).indexOf(px_size) < sorted.length-1)
+                            {
+                                boolBreak = true
+                            }
                         }
                         // else
                         // {
@@ -95,7 +144,11 @@ export const manage_mediaQuery = (width) =>{
                     case '>' :
                         if(width > px_size)
                         {
-                            applyStyle(val.prop)
+                            applyStyle(val.prop);
+                            if(querySizeArr.sort((a,b) =>{return b-a}).indexOf(px_size) < sorted.length-1)
+                            {
+                                boolBreak = true
+                            }
                         }
                         // else
                         // {
@@ -105,7 +158,11 @@ export const manage_mediaQuery = (width) =>{
                     case '>=' :
                         if(width >= px_size)
                         {
-                            applyStyle(val.prop)
+                            applyStyle(val.prop);
+                            if(querySizeArr.sort((a,b) =>{return b-a}).indexOf(px_size) < sorted.length-1)
+                            {
+                                boolBreak = true
+                            }
                         }
                         // else
                         // {
@@ -119,6 +176,15 @@ export const manage_mediaQuery = (width) =>{
                 console.log(err.message)
                 console.error('please enter a valid media query parameter')
             }
+
+            if(boolBreak)
+            {
+                break;
+            }
+        }
+        
+        sorted.forEach(val =>{
+            
         })
 
         function applyStyle(val)
@@ -394,6 +460,7 @@ class diffAlgo{
                         patches.push(
                             [parent,parent =>{
                                 parent.setAttribute(x,y)
+                                parent[`${x}`] = y;
                             }]
                         )
                     break;
@@ -422,16 +489,28 @@ class diffAlgo{
         }
 
         const updateChild = (Ochildren,Nchildren,parent) =>{
+            // console.log(parent)
             const arrays = zip(Ochildren,Nchildren);
             // console.log(Ochildren.length, arrays.length,parent.childNodes)
             arrays.forEach((val,idx) =>{
                 if(val.length > 0)
                 {
-                    switch(true)
+                    //update eventListeners
+                    if(val.length > 1 && val[1].eventListener)
                     {
-                        case parent.childNodes[idx] === undefined:
-                            // console.log(arrays, parent, ' parent ', idx, ' index ')
-                    }
+                        // parent['onclick'] = ()=>{console.log("updated node")}
+                        Object.keys(val[1].eventListener).forEach(event =>{
+                            if(val[1].eventListener[event] !== val[0].eventListener[event])
+                            {
+                                patches.push(
+                                    [parent,parent =>{
+                                        parent.childNodes[idx][event] = val[1].eventListener[event]
+                                    }]
+                                )
+                            }
+                        })
+                    } 
+                    //update eventListeners
                     startchildProcess(val[0],val[1],parent.childNodes[idx])
                 }
             });
@@ -599,7 +678,7 @@ class createElementClass{
                             switch(true)
                             {
                                 case this.mainObj.children[cid].attribute !== undefined && child.genericStyle.every(param =>{return !param.includes(val)}):
-                                    console.log(child.genericStyle)
+                                    // console.log(child.genericStyle)
                                     this.mainObj.children[cid].attribute.style = this.mainObj.children[cid].attribute.style === undefined ? '' : this.mainObj.children[cid].attribute.style
 
                                     const style_child = new addStyleComponent(GENERIC_DOM[val].child).update();

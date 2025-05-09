@@ -1,10 +1,13 @@
 import {__c,__SYD,__sS,__sC,__m,__g,__p, __u, __v , manage_mediaQuery} from './sydneyLib/sydneyDom.js';
 
 import './_body_p1.js';
-import './_body_p2.js';
+// import './_body_p2.js';
+import './p2_rich.js'
 import './_body_p3.js';
 import './_body_p4.js';
 import './_body_p5.js';
+import "./roadMap.js"
+import "./aux__about__sec.js"
 
 __sS([
     {
@@ -12,30 +15,86 @@ __sS([
         style:{
             height:'100vh',
             width:'100vw',
-            background:`#fff`,
+            background:'url(./assets/container_bg.png) , linear-gradient(135deg, rgb(3, 109, 183), rgb(64, 168, 241))',
+            backgroundPosition:"center",
+            backgroundSize:"cover",
+            backgroundRepeat:"no-repeat",
+            // backgroundImage:'',
+            // backgroundImage:'url(./assets/mainBg.gif)',
+            backgroundAttachment: 'fixed',
             overflowY:'scroll',
             position:'relative',
-            fontFamily:'sticker',
+            // fontFamily:'"Aladin", system-ui',
+            // fontFamily:'Mantis Rumble_PersonalUseOnly',
+            // fontFamily:'tahoma , sans serif',
+            // wordSpacing:'5px',
+            fontFamily:'sunrise',
             overflowX:'hidden',
-            color:'#999999'
+            color:'#ffffff',
+            paddingTop:"50px"
         }
     },
     {
         nameTag:'navBar',
         style:{
-            width:'100%',
+            width:'calc(100% - 15px)',
+            maxWidth:"900px",
             display:'flex',
-            padding:'5px 20px',
+            // padding:'15px 20px',
             columnGap:'30px',
-            position:'sticky',
-            top:'0',
+            position:'fixed',
+            top:'5px',
+            left:"50%",
+            transform:"translateX(-50%)",
             zIndex:'999',
+            background:' rgb(3, 83, 139) ',
             alignItems:'center',
-            justifyContent:'space-between',
-            color:"#FFD700"
+            justifyContent:'space-around',
+            minHeight:'70px',
+            // borderRadius:"15px",
+            // border:"1px solid #333",
+            boxShadow:"0px 2px 1px 2px rgb(2, 56, 94) , 0 0 1px 1px rgb(2, 56, 94)",
+        }
+    },
+    {
+        nameTag:"txt_shade1",
+        style:{
+            color:"#fff",
+            // textShadow:"0px 0px 2px #171717",
+            lineHeight:"20px"
+        }
+    },
+    {
+        nameTag:"txt_shade2",
+        style:{
+            color:"#fff",
+            textShadow:"3px 3px 1px #171717",
+            letterSpacing:"2px"
+        }
+    },
+    {
+        nameTag:"txt_shade3",
+        style:{
+            color:"#fff",
+            textShadow:"2px 2px 1px #171717"
         }
     }
 ])
+
+__sS(
+    {
+        nameTag:'_social_style',
+        style:{
+            minHeight:'30px',
+            minWidth:'30px',
+            maxHeight:"30px",
+            maxWidth:"30px",
+            cursor:'pointer',
+            // borderRadius:'10px',
+            
+        }
+    }
+)
 
 __SYD.container = () =>{
     return __c(
@@ -44,117 +103,127 @@ __SYD.container = () =>{
             style:__sC.container()
         },
         [
-            // __SYD.navBar(),
+            __SYD.navBar(),
             // __SYD._p1(),
+            // __SYD._p2(),
             __SYD._p2(),
             __SYD._p3(),
-            // __SYD._p4(),
-            __c("div",{style:"display:flex;align-items:center;justify-content:center;width:100%;"},[
-                   __c('p',{style:'align-self:center;text-align:center;font-size: 1.2rem;line-height: 1.75rem;text-align:left;font-weight:800;width:100%;max-width:1000px;padding:50px 20px;text-align:center;'},[
-                        `This is the degen playground. No rules. No brakes. Just Baby Cocoro bringing mayhem, rewards, and BASE-level swagger to the chain. Buckle up.`//,__c('span',{class:'rainbow__text'},[" $TEFE"])
-                    ]), 
-            ]),
-            // __SYD._p5(),
+            __SYD._p3_aux(),
+            __SYD.roadMapPage(),
+            __SYD._p5(),
             __c(
                 'div',
                 {
-                    style:'height:fit-content;width:100%;padding:60px;background:rgb(3, 109, 183);display:flex;align-items:center;flex-direction:column;row-gap:60px;'
+                    style:'height:fit-content;width:100%;padding:50px;background:rgb(1, 41, 70);display:flex;align-items:center;row-gap:10px;flex-direction:column;'+__sC['txt_shade3']()
                 },
                 [
-                    // __c('p',{style:'font-size: .9rem;font-family:sunrise;line-height: 1.75rem;text-align:center;font-weight:900;color:#fff;width:100vw'},[
-                    //     `© ${new Date().getFullYear()} All Right Reserved by $MOONPIG`
-                    // ])
-                    __c(
-                        "h1",
-                        {
-                            style:"min-width:max-content;font-weight:900;color:#fff;text-transform:uppercase;font-style:italic;font-family:sunrise;",
-                            class:"footerText"
-                        },
-                        [
-                            "baby cocoro"
-                        ]
-                    ),
-                    __c(
-                        "h2",
-                        {
-                            style:"min-width:max-content;font-weight:900;color:#fff;text-transform:uppercase;",
-                            class:"footerText2"
-                        },
-                        [
-                            "CA: -------------------------------------"
-                        ]
-                    ),
+                    __c("div" , {style:"height:fit-content;width:100%;padding:60px;display:flex;align-items:center;flex-direction:column;row-gap:60px;"},[
+                        __c(
+                            "h1",
+                            {
+                                style:"min-width:max-content;width:100%;text-align:center;font-weight:900;color:#fff;text-transform:uppercase;font-style:italic;font-family:sunrise;",
+                                class:"footerText"
+                            },
+                            [
+                                "baby cocoro"
+                            ]
+                        ),
+                        __c(
+                            "h2",
+                            {
+                                style:"min-width:max-content;width:100%;text-align:center;font-weight:900;color:#fff;text-transform:uppercase;",
+                                class:"footerText2"
+                            },
+                            [
+                                "CA: -------------------------------------"
+                            ]
+                        ),
+                        __c(
+                            "div",
+                            {
+                                style:"display:flex;justify-content:center;column-gap:15px;row-gap:30px;height:fit-content;width:100%;flex-wrap:wrap;"
+                            },
+                            [
+                                __c(
+                                    "a",
+                                    {
+                                        style:"height:fit-content;width:fit-content;",
+                                        href:"#"
+                                    },
+                                    [
+                                        __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/frog.png);"},[],
+                                            {
+                                                genericStyle:["bg_cover"]
+                                            })
+                                    ]
+                                ),
+                                __c(
+                                    "a",
+                                    {
+                                        style:"height:fit-content;width:fit-content;",
+                                        href:"https://x.com/babybbycoco?s=21"
+                                    },
+                                    [
+                                        __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/x.png);"},[],
+                                            {
+                                                genericStyle:["bg_cover"]
+                                            })
+                                    ]
+                                ),
+                                __c(
+                                    "a",
+                                    {
+                                        style:"height:fit-content;width:fit-content;",
+                                        href:"#"
+                                    },
+                                    [
+                                        __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/basescan.png);"},[],
+                                            {
+                                                genericStyle:["bg_cover"]
+                                            })
+                                    ]
+                                ),
+                                __c(
+                                    "a",
+                                    {
+                                        style:"height:fit-content;width:fit-content;",
+                                        href:"#"
+                                    },
+                                    [
+                                        __c("div" , {style:"height:70px;min-width:200px;border-radius:30px;border:4px solid #000;background-image:url(./assets/dex.png);background-color:#fff;"},[],
+                                            {
+                                                genericStyle:["bg_fit"]
+                                            })
+                                    ]
+                                ),
+                                __c(
+                                    "a",
+                                    {
+                                        style:"height:fit-content;width:fit-content;",
+                                        href:"#"
+                                    },
+                                    [
+                                        __c("div" , {style:"height:70px;min-width:200px;border-radius:30px;border:4px solid #000;background-image:url(./assets/uniswap.png);background-color:#fff;"},[],
+                                            {
+                                                genericStyle:["bg_fit"]
+                                            })
+                                    ]
+                                ),
+                            ]
+                        ),
+                    ]),
+                    __c('p',{style:'font-size: .9rem;font-family:sunrise;text-align:center;font-weight:900;color:#fff;width:100vw;word-spacing:12px;'},[
+                        `© ${new Date().getFullYear()} All Right Reserved by  $Baby Cocoro `
+                    ]),
                     __c(
                         "div",
                         {
-                            style:"display:flex;justify-content:center;column-gap:15px;row-gap:30px;height:fit-content;width:100%;flex-wrap:wrap;"
+                            style:"margin-top:10px;display:flex;column-gap:10px;justify-content:center;"
                         },
                         [
-                            __c(
-                                "a",
-                                {
-                                    style:"height:fit-content;width:fit-content;",
-                                    href:"#"
-                                },
-                                [
-                                    __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/frog.png);"},[],
-                                        {
-                                            genericStyle:["bg_cover"]
-                                        })
-                                ]
-                            ),
-                            __c(
-                                "a",
-                                {
-                                    style:"height:fit-content;width:fit-content;",
-                                    href:"https://x.com/babybbycoco?s=21"
-                                },
-                                [
-                                    __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/x.png);"},[],
-                                        {
-                                            genericStyle:["bg_cover"]
-                                        })
-                                ]
-                            ),
-                            __c(
-                                "a",
-                                {
-                                    style:"height:fit-content;width:fit-content;",
-                                    href:"#"
-                                },
-                                [
-                                    __c("div" , {style:"height:70px;min-width:70px;border-radius:50%;border:4px solid #000;background-image:url(./assets/basescan.png);"},[],
-                                        {
-                                            genericStyle:["bg_cover"]
-                                        })
-                                ]
-                            ),
-                            __c(
-                                "a",
-                                {
-                                    style:"height:fit-content;width:fit-content;",
-                                    href:"#"
-                                },
-                                [
-                                    __c("div" , {style:"height:70px;min-width:200px;border-radius:30px;border:4px solid #000;background-image:url(./assets/dex.png);background-color:#fff;"},[],
-                                        {
-                                            genericStyle:["bg_fit"]
-                                        })
-                                ]
-                            ),
-                            __c(
-                                "a",
-                                {
-                                    style:"height:fit-content;width:fit-content;",
-                                    href:"#"
-                                },
-                                [
-                                    __c("div" , {style:"height:70px;min-width:200px;border-radius:30px;border:4px solid #000;background-image:url(./assets/uniswap.png);background-color:#fff;"},[],
-                                        {
-                                            genericStyle:["bg_fit"]
-                                        })
-                                ]
-                            ),
+                            __SYD.page1SocialBtn({contentSrc:'tel' , link:"https://t.me/+DpxQBtNpqMI4NzY0"}),
+                            __SYD.page1SocialBtn({contentSrc:'x' , link:"https://x.com/highmax204?s=21&t=qfSXdhkZzfcCwc1cZFrtqQ"}),
+                            // __SYD.page1SocialBtn({contentSrc:'tik' , link:"#"})
                         ]
                     )
                 ]
@@ -173,37 +242,48 @@ __SYD.navBar = () =>{
             style:__sC.navBar({
                 method:'add',
                 style:{
-                    height:__p(['navBar','_h'],'130px'),
+                    height:__p(['navBar','_h'],'fit-content'),
+                    // padding:`15px ${__p(['navBar','padd'],'20px')}`,
+                    justifyContent:`${__p(['navBar','padd'],'20px') === '20px' ? 'space-around' : 'space-between'}`,
+                    borderRadius:`${__p(['navBar','padd'],'20px') === '20px' ? '15px' : '5px'}`,
                     // backgroundImage:`url(./assets/nav_bg.png)`,
                     // backgroundPosition:'100% 100%'
                 }
-            }),
-            class:"navBar"
+            })
         },
         [
             __c(
-                'div',
+                "div",
                 {
-                    style:`min-height:${__p(['navBar','l_size'],'100px')};min-width:${__p(['navBar','l_size'],'100px')};border-radius:50%;background-image:url('./assets/logo.jpeg');`,
-                    class:"logo-wrapper"
-                },[],{genericStyle:['bg_fit']}
-            ),
-            __c(
-                'div',
-                {
-                    style:`display:${__p(['navBar','__nav_d'],'flex')};width:fit-content;height:fit-content;justify-content:center;column-gap:50px;padding:5px;`,
+                    style:`display:flex;column-gap:5px;align-items:center;${__p(['navBar','__nav_d'],'flex') === 'flex' ? '' : 'position:absolute;left:5px;'};`
                 },
                 [
-                    __SYD.nav_b_text('Who is MOONPIG?','_p3'),
-                    // __SYD.nav_b_text('Tokenomics','_p5'),
-                    __SYD.nav_b_text('How to Buy','_p4'),
+                    __c(
+                        'div',
+                        {
+                            style:`min-height:${__p(['navBar','l_size'],'50px')};min-width:${__p(['navBar','l_size'],'50px')};border-radius:unset;background-image:url('./assets/mainLogo.png');border-radius:50%;background-color:transparent;`,
+                        },[],{genericStyle:['bg_fit']}
+                    ),
+                    // __c('h1',{class:'',style:`color:#fff;font-family:header;font-size:${__p(['navBar','padd'],'20px') === '20px' ? "18px" : "14px"};`+__sC['txt_shade2']({method:"remove",style:['color']})},[' $BABY COCORO ']),
                 ]
             ),
-            __SYD.buyNowBtn(),
             __c(
                 'div',
                 {
-                    style:`height:50px;width:50px;background-image:url('./assets/menu.png');display:${__p(['navBar','__nav_d'],'flex') === 'flex' ? 'none' : 'block'};`,class:'click'
+                    style:`display:${__p(['navBar','__nav_d'],'flex')};width:fit-content;height:fit-content;justify-content:center;column-gap:50px;padding:5px;` + __sC['txt_shade1'](),
+                },
+                [
+                    __SYD.nav_b_text('Home','_p2'),
+                    __SYD.nav_b_text('About','_p3'),
+                    __SYD.nav_b_text('Tokenomics','_p5'),
+                    __SYD.nav_b_text('road map','roadMapPage'),
+                ]
+            ),
+            __SYD.page1Socials(),
+            __c(
+                'div',
+                {
+                    style:`position:absolute;right:5px;height:35px;width:35px;background-image:url('./assets/menu.png');display:${__p(['navBar','__nav_d'],'flex') === 'flex' ? 'none' : 'block'};`,class:' menuRotate'
                 },
                 [
 
@@ -245,29 +325,26 @@ __SYD.navBar = () =>{
         {
             createState:{
                 stateName:'navBar',
-                state:{_h:'130px',l_size:'100px'}
+                state:{_h:'fit-content',l_size:'50px' , padd:'20px' , __nav_d:'flex'}
             },
             mediaQuery:{
                 query:[
-                    {size:'<500px',prop:{_h:'100px',l_size:'70px'}},
+                    {size:'<500px',prop:{_h:'fit-content',l_size:'40px' , padd:'5px'}},
                     {size:'<800px',prop:{__nav_d:'none'}}
                 ],
-                defState:{_h:'130px',l_size:'100px',__nav_d:'flex'}
+                defState:{_h:'fit-content',l_size:'50px',__nav_d:'flex',padd:'20px'}
             },
             genericStyle:['bg_cover']
         }
     )
 }
 
-__SYD.buyNowBtn = () =>{
-    return __c('a',{href:'https://dexscreener.com/solana/F8R9okKt8PvygkZ6bCimxELYb2kUn9E3FDdugfeRUYJw',target:'blank',style:`display:${__p(['navBar','__nav_d'],'block')};padding:15px 20px;text-decoration:none;font-size:13px;`,class:' btns_style'},['Buy Now'],{genericStyle:['bg_fit']})
-}
-
 __SYD.nav_b_text = (text,click) =>{
     return __c(
         'p',
         {
-            style:'font-size:13px;cursor:pointer;font-family:sunrise;font-weight:700;line-height:150%;'
+            style:'font-size:14px;font-weight:700;cursor:pointer;text-transform:uppercase;font-family:sunrise;transition:all .3s linear;color:#fff;',
+            // class:'btn_buy'
         },
         [
             text
@@ -277,15 +354,21 @@ __SYD.nav_b_text = (text,click) =>{
                 onclick:() =>{
                     switch(true)
                     {
-                        case click === 'moonPigLink':
-                            window.location = 'https://dexscreener.com/solana/F8R9okKt8PvygkZ6bCimxELYb2kUn9E3FDdugfeRUYJw'
+                        case click === 'suntzutrx':
+                            window.location = 'https://tools.smithii.io/launches-list/solana'
                         break;
                         default:
                             __v[click].scrollIntoView();
-                            __v['mobileMenu'].blur()
+                            __v['mobileMenu'].blur();
                             
                     }
-                }
+                },
+                onmouseover:(e) =>{
+                    e.target.style.textShadow = '2px 2px 1px #171717'
+                },
+                onmouseout:(e) =>{
+                    e.target.style.textShadow = '0px 0px 0px transparent'
+                },
             }
         }
     )
@@ -295,15 +378,17 @@ __SYD.mobileMenu = () =>{
     return __c(
         'div',
         {
-            style:`height:fit-content;width:fit-content;padding:20px 10px;display:${__p(['mobileMenu','_d'],'none')};flex-direction:column;row-gap:20px;background: #0D0D0D;border: 2px solid #FF7B54;box-shadow:0 4px 12px rgba(255, 123, 84, 0.25),0 6px 20px rgba(0, 0, 0, 0.6);border-radius:10px;border-top-right-radius:unset;border-bottom-right-radius:unset;position:absolute;top:100%;right:0;opacity:${__p(['mobileMenu','_op'],'0')};transition:opacity .3s linear;border-right:unset;border-top:unset;`,
+            style:`height:fit-content;width:fit-content;min-width:200px;padding:20px 10px;display:${__p(['mobileMenu','_d'],'none')};flex-direction:column;row-gap:20px;background:rgb(3, 83, 139);border:1px solid rgb(2, 56, 94);border-left:5px solid rgb(2, 56, 94);border-bottom:5px solid rgb(2, 56, 94);border-radius:15px;border-top-right-radius:unset;border-bottom-right-radius:unset;position:absolute;top:100%;right:0;opacity:${__p(['mobileMenu','_op'],'0')};transition:opacity .3s linear;box-shadow:-2px 2px 10px #333333b3;`,
             tabindex:'1',
             class:'mobile_menu'
         },
         [
             __SYD.nav_b_text('About','_p3'),
-            // __SYD.nav_b_text('Tokenomics','_p5'),
-            __SYD.nav_b_text('How to Buy','_p4'),
-            __SYD.nav_b_text('Buy Now','moonPigLink'),
+            __SYD.nav_b_text('Tokenomics','_p5'),
+            __SYD.nav_b_text('Road Map','roadMapPage'),
+            // __SYD.nav_b_text('How to Buy','_p4'),
+            __SYD.nav_b_text('Buy Now','suntzutrx'),
+            // __SYD.buyNowBtn()
 
         ],
         {
@@ -329,8 +414,44 @@ __SYD.mobileMenu = () =>{
     )
 }
 
+
+__SYD.page1Socials = () =>{
+    return __c(
+        'div',
+        {
+            style:`width:fit-content;padding:10px 0;display:flex;justify-content:center;align-items:center;column-gap:20px;row-gap:20px;flex-wrap:wrap;${__p(['navBar','__nav_d'],'flex') === 'flex' ? "" : "position:absolute;right:60px;"};perspective:800px;`
+        },
+        [
+            // __SYD.page1SocialBtn({contentSrc:'mm'}),
+            __SYD.page1SocialBtn({contentSrc:'tel' , link:"https://t.me/+DpxQBtNpqMI4NzY0"}),
+            __SYD.page1SocialBtn({contentSrc:'x' , link:"https://x.com/highmax204?s=21&t=qfSXdhkZzfcCwc1cZFrtqQ"}),
+            __SYD.page1SocialBtn({contentSrc:'sol' , link:"https://dexscreener.com/solana/fjp2xcly5uncrtmnyhdqhzrcjnx2e2yjsm3nhbamn6uy"}),
+        ]
+    )
+}
+
+__SYD.page1SocialBtn = ({contentSrc,link = '#'}) =>{
+    return __c(
+        'div',
+        {
+            style:__sC._social_style({method:'add',style:{backgroundImage:`url('./assets/${contentSrc}.png')`}}),
+            class:'btn_buy__'
+        },
+        [],
+        {
+            genericStyle:['bg_fit'],
+            events:{
+                onclick:() =>{
+                    // window.location = link
+                    window.open(link , "_blank")
+                }
+            }
+        }
+    )
+}
+
 __m(__SYD.container())
 
-window.addEventListener("DOMContentLoaded" , e =>{
+addEventListener('DOMContentLoaded' , e =>{
     manage_mediaQuery(window.innerWidth)
 })
